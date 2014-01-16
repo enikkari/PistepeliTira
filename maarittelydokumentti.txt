@@ -1,0 +1,13 @@
+Tietorakenteet harjoitustyš 2014: 'Pistepeli algoritmeille' 
+Eeva Nikkari
+
+Ideana on toteuttaa 'pistepeli' ja algoritmi, joka 'pelaa' sitŠ. Toteutetaan siis suuntaamaton verkko, jonka solmut on pisteytetty positiivisilla kokonaisluvuilla. Kaaret ovat siis painottamattomia, mutta solmuilla on jokin pistearvo. 
+
+PelissŠ kuljetaan solmusta solmuun ja yritetŠŠn saada mahdollisimman paljon pisteitŠ. Pistesaldoon lisŠtŠŠn siis aina kŠydyn solmun pisteet.  Jo kerran kŠydyssŠ solmussa ei saa kŠydŠ uudestaan.
+ 
+ En keksinyt tehokasta algoritmia, joka saisi aina ratkaistua pelin maksimipistemŠŠrŠllŠ, siis kŠymŠttŠ lŠpi kaikkia reittivaihtoehtoja. Toteutetaan siis 'tyhmempi' algoritmi DFS:llŠ, joka kuitenkin yrittŠŠ optimoida voiton.
+Ideana on, ettŠ Algoritmi kŠy DFS:llŠ lŠpi verkon. Talletetaan taulukkoon algoritmin saamat pistemŠŠrŠt kussakin kŠydyssŠ solmussa, niin ettŠ algoritmin tultua umpikujaan osataan laskea uuden reitin pisteet oikein. SŠilytetŠŠn myšs tietoa sen hetkisestŠ parhaasta umpikujassa saadusta pistemŠŠrŠstŠ ja tŠhŠn johtaneesta reitistŠ. Optimoidaan algoritmia siten, ettŠ se valitsee viereisistŠ solmuista seuraavaksi sen, jossa on eniten pisteitŠ. Kun koko verkko on kŠyty lŠpi palautetaan parhaat pisteet ja reitti.
+
+PitŠŠ siis toteuttaa verkko, solmut, linkitetty lista sekŠ itse algoritmi. Aikavaativuuden tavoite on DFS:n aikavaativuus eli O(|E|+|V|) ja tilavaativuus O(|V[).
+
+Voisi olla myšs hauskaa toteuttaa eri tavalla toimivia algoritmeja ja pistŠŠ niitŠ kilpailemaan keskenŠŠn, mutta yksi algoritmi saa nyt riittŠŠ tŠssŠ tyšssŠ :)
