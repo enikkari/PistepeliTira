@@ -6,6 +6,8 @@
 
 package pistepeli_tira;
 
+import pistepeli_tira.verkko.Solmu;
+
 /**
  *
  * @author eevanikkari
