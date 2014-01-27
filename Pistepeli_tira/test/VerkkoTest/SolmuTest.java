@@ -84,6 +84,12 @@ public class SolmuTest {
         assertEquals(perttiSolmu.getNimi(), "Pertti");
     }
     
+    @Test
+    public void nimetonSolmu(){
+        Solmu nimeton = new Solmu(30);
+        assertEquals(nimeton.toString(), "null:30");
+    }
+    
 
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:

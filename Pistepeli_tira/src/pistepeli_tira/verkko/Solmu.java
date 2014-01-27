@@ -17,12 +17,20 @@ public class Solmu implements Comparator{
        this.pistearvo = 0;
     }
     
+    
     /*
-    Luo halutun arvoisen solmun
+    Luo halutun arvoisen solmun 
     */
     public Solmu(String nimi, int pistearvo){
        this.nimi = nimi;
        this.pistearvo = pistearvo;
+    }
+    /*
+    Luo nimettömän halutun arvoisen solmun 
+    */
+    public Solmu(int pisteArvo){
+       this.nimi = null;
+       this.pistearvo = pisteArvo;
     }
     
     public int getPistearvo(){
