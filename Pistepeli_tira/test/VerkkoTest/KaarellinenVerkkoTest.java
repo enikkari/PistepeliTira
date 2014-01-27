@@ -43,9 +43,11 @@ public class KaarellinenVerkkoTest {
         Solmu g = new Solmu("g", 4); 
         Solmu h = new Solmu("h", 2); 
 //        this.verkko = new Verkko(new Solmu[][]{{a,b,c,d},{b,c},{c,d},{d,e},{e,f,g,a},{f,g},{g,h},{h},});
-        this.verkko = new Verkko( new Solmu[]{a,b,c,d,e,f,g,h} );
-        verkko.lisaaKaaret(new int[][]{{0,1},{0,2},{0,3},{1,2},{2,3},{3,4},{4,0},{4,5},{4,6},{5,6},{6,7}});
-         
+        Verkko uusiVerkko = new Verkko( new Solmu[]{a,b,c,d,e,f,g,h} );
+        uusiVerkko.lisaaKaaret(new int[][]{{0,1},{0,2},{0,3},{1,2},{2,3},{3,4},{4,0},{4,5},{4,6},{5,6},{6,7}});
+//        uusiVerkko.lisaaKaari(0, 1);
+        this.verkko = uusiVerkko;
+        
     }
     
     @After
@@ -54,6 +56,10 @@ public class KaarellinenVerkkoTest {
 
      @Test
      public void oikeaMaaraKaaria() {
-         assertEquals(11, verkko.getKaaria());
+         assertEquals(11, this.verkko.getKaaria());
+     }
+     @Test
+     public void oikeaMaaraSolmuja() {
+         assertEquals(8, this.verkko.getSolmuja());
      }
 }

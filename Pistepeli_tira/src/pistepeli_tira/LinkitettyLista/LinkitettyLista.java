@@ -26,7 +26,8 @@ public class LinkitettyLista {
    }
    
    /**
-    * Muokataan vielä niin että lisää noden suuruusjärjestyksessä oikealle paikalle
+    * Muokataan vielä niin että lisää noden suuruusjärjestyksessä oikealle paikalle.
+    * Tällöin lisäämisen aikavaativuus muuttuu lineaariseksi listan pituuden suhteen.
    **/
    public void add(SolmuNode uusiNodi){
        SolmuNode seuraava = this.top.seuraava();

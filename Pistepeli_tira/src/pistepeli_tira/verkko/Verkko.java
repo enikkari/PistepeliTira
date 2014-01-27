@@ -38,8 +38,9 @@ public class Verkko {
         this.kaaria=0;
         this.solmuja=solmut.length;
         this.vierus = new LinkitettyLista[solmut.length];
-        for(Solmu solmu : solmut){
-            LinkitettyLista lista = new LinkitettyLista(solmu);
+        for(int i =0; i<solmut.length; i++){
+            LinkitettyLista lista = new LinkitettyLista(solmut[i]);
+            this.vierus[i]=lista;
         }
     }
 //    /**

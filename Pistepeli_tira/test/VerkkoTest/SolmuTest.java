@@ -70,8 +70,19 @@ public class SolmuTest {
     public void SamaSolmu(){
         assertEquals(perttiSolmu, perttiSolmu);
     }
+    @Test
+    public void nollaArvoOikein(){
+        assertEquals(nollaSolmu.getPistearvo(), 0);
+    }
+    @Test
+    public void arvoOikein(){
+        assertEquals(perttiSolmu.getPistearvo(), 100);
+    }
     
-    
+    @Test
+    public void nimiOikein(){
+        assertEquals(perttiSolmu.getNimi(), "Pertti");
+    }
     
 
     // TODO add test methods here.
