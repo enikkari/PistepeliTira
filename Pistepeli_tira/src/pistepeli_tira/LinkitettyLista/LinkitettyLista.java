@@ -6,9 +6,6 @@ import pistepeli_tira.verkko.Solmu;
 /**
  *Tähän toteutetaan linkitetty lista
  *Tässä työssä LinkitettyLista listaa verkon solmuja.
- * Linkitetty lista siten, että suurimman arvoiset solmut tulevat listassa
- * ensimmäisenä. Listan ensimmäinen eli top nodi on listalle ensimmäisenä annettu 
- * SolmuNode ja se ei siirry enää listassa arvostaan huolimatta.
  */
 public class LinkitettyLista {
     
@@ -28,13 +25,9 @@ public class LinkitettyLista {
    **/
    public void add(Solmu solmu){
        SolmuNode uusiNodi = new SolmuNode(solmu);
-//       SolmuNode seuraava = this.top.seuraava();
-//       this.top.asetaSeuraava(uusiNodi);
-//       uusiNodi.asetaSeuraava(seuraava);
-       SolmuNode edeltaja = etsiSeuraavaksiSuurin(uusiNodi.getSolmunPistearvo());
-       SolmuNode seuraaja = edeltaja.seuraava();
-       edeltaja.asetaSeuraava(uusiNodi);
-       uusiNodi.asetaSeuraava(seuraaja);
+       SolmuNode seuraava = this.top.seuraava();
+       this.top.asetaSeuraava(uusiNodi);
+       uusiNodi.asetaSeuraava(seuraava);
    }
    
    
@@ -42,18 +35,18 @@ public class LinkitettyLista {
        return top.getSolmu();
    }
    
-   private SolmuNode etsiSeuraavaksiSuurin(int uudenNodenPistearvo){
-       
-       SolmuNode missaMennaan= top;
-       while(missaMennaan.seuraava() != null){
-           if(missaMennaan.seuraava().getSolmunPistearvo() <= uudenNodenPistearvo){
-               return missaMennaan;
-           }
-           missaMennaan=missaMennaan.seuraava();
-       }
-       
-       return missaMennaan;
-   }
+//   private SolmuNode etsiSeuraavaksiSuurin(int uudenNodenPistearvo){
+//       
+//       SolmuNode missaMennaan= top;
+//       while(missaMennaan.seuraava() != null){
+//           if(missaMennaan.seuraava().getSolmunPistearvo() <= uudenNodenPistearvo){
+//               return missaMennaan;
+//           }
+//           missaMennaan=missaMennaan.seuraava();
+//       }
+//       
+//       return missaMennaan;
+//   }
    
    public boolean search(Solmu solmu){
        SolmuNode missaOllaan= this.top;
@@ -64,6 +57,21 @@ public class LinkitettyLista {
            missaOllaan = missaOllaan.seuraava();
        }
        return false;
+   }
+   
+   /**
+    * palauttaa noden, jossa kyseinen solmu on
+    * @return 
+    */
+   public SolmuNode searchNode(Solmu solmu){
+       SolmuNode missaOllaan= this.top;
+       while(missaOllaan != null){
+           if(missaOllaan.getSolmu() == solmu){
+               return missaOllaan;
+           }
+           missaOllaan = missaOllaan.seuraava();
+       }
+       return null;
    }
    
 }

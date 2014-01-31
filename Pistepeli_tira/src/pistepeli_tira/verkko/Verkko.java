@@ -12,24 +12,6 @@ public class Verkko {
     int solmuja; //Kuinka monta solmua verkossa on
     int kaaria; //Kuinka monta kaarta verkossa on;
     
-//    /**
-//    * Verkkolle annetaan parametreinä lista listoja, joissa indeksissä 0 on itse solmu
-//    *ja lopuilla paikoilla solmut, joihin kyseisestä solmusta osoittaa kaari.
-//    */
-//    public Verkko(Solmu[][] solmut){
-//        this.vierus = new LinkedList[solmut.length];
-//        this.solmuja=solmut.length;
-//        this.kaaria=0;
-//        for(int i=0; i<solmut.length; i++){
-//            LinkedList<Solmu> lista = new LinkedList<Solmu>();
-//            this.kaaria =+ solmut[i].length-1;
-//            lista.add(solmut[i][0]); //lopullisessa toteutuksessa ensimmäinen solmu on 'top'
-//            for(int a =1; a<solmut[i].length; ){
-//                lista.add(solmut[i][a]);
-//            }
-//            vierus[i]=lista;
-//        }
-//    }
     /**
      * Luo verkon jossa ei ole vielä kaaria, vain solmut.
      * @param solmut 
@@ -43,19 +25,7 @@ public class Verkko {
             this.vierus[i]=lista;
         }
     }
-//    /**
-//     * lisää kaari e->d
-//     * Jos solmuja ei ole verkossa, ei tehdä mitään.
-//     */
-//    public void lisaaKaari(Solmu e, Solmu d){
-//        for(LinkedList lista : this.vierus){
-//            if(lista.getFirst()==e){
-//                lista.add(d);
-//                this.kaaria++;
-//                break;
-//            }
-//        }
-//    }
+
     /**
      * lisää kaari e->d solmujen indeksöinnin avulla
      */
@@ -83,6 +53,24 @@ public class Verkko {
             return null;
         }
     }
+    /**
+     * aikavaativuus O(|V|)
+     * @param solmu
+     * @return 
+     */
+    
+    public int getMissaIndeksissaSolmuOn(Solmu solmu){
+        for(int i =0; i<this.solmuja; i++){
+            if(this.getSolmuIdeksissa(i) == solmu){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    public LinkitettyLista getVierus(int i){
+        return this.vierus[i];
+    }
     
     public int getKaaria(){
         return this.kaaria;
@@ -90,5 +78,6 @@ public class Verkko {
     public int getSolmuja(){
         return this.solmuja;
     }
+    
     
 }

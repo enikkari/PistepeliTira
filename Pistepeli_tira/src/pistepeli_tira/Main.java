@@ -19,6 +19,8 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        boolean[] asd = new boolean[4];
+        System.out.println(asd[0]);
     }
     
 }

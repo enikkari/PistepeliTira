@@ -21,6 +21,15 @@ import pistepeli_tira.verkko.Verkko;
  */
 public class KaarellinenVerkkoTest {
     Verkko verkko;
+    Solmu a; 
+        Solmu b; 
+        Solmu c; 
+        Solmu d; 
+        Solmu e; 
+        Solmu f; 
+        Solmu g; 
+        Solmu h; 
+    
     public KaarellinenVerkkoTest() {
     }
     
@@ -34,14 +43,14 @@ public class KaarellinenVerkkoTest {
     
     @Before
     public void setUp() {
-        Solmu a = new Solmu("a", 20); 
-        Solmu b = new Solmu("b", 5); 
-        Solmu c = new Solmu("c", 9); 
-        Solmu d = new Solmu("d", 3); 
-        Solmu e = new Solmu("e", 1); 
-        Solmu f = new Solmu("f"); 
-        Solmu g = new Solmu("g", 4); 
-        Solmu h = new Solmu("h", 2); 
+        this.a = new Solmu("a", 20); 
+        this.b = new Solmu("b", 5); 
+        this.c = new Solmu("c", 9); 
+        this.d = new Solmu("d", 3); 
+        this.e = new Solmu("e", 1); 
+        this.f = new Solmu("f"); 
+        this.g = new Solmu("g", 4); 
+        this.h = new Solmu("h", 2); 
 //        this.verkko = new Verkko(new Solmu[][]{{a,b,c,d},{b,c},{c,d},{d,e},{e,f,g,a},{f,g},{g,h},{h},});
         Verkko uusiVerkko = new Verkko( new Solmu[]{a,b,c,d,e,f,g,h} );
         uusiVerkko.lisaaKaaret(new int[][]{{0,1},{0,2},{0,3},{1,2},{2,3},{3,4},{4,0},{4,5},{4,6},{5,6},{6,7}});
@@ -61,5 +70,28 @@ public class KaarellinenVerkkoTest {
      @Test
      public void oikeaMaaraSolmuja() {
          assertEquals(8, this.verkko.getSolmuja());
+     }
+     @Test
+     public void solmujenIneksointi() {
+         Solmu[] solmutVerkossa =
+                 new Solmu[verkko.getSolmuja()];
+         
+         for(int i = 0; i<verkko.getSolmuja(); i++){
+             solmutVerkossa[i]=verkko.getSolmuIdeksissa(i);
+         }
+         
+         Solmu[] solmutOikein =
+                 new Solmu[]{a,b,c,d,e,f,g,h};
+         
+         boolean ovatkoTaulukotSamat = true;
+         for(int i = 0; i<verkko.getSolmuja(); i++){
+             if(solmutVerkossa[i] != solmutOikein[i]){
+                 ovatkoTaulukotSamat = false;
+                 break;
+             }
+         }
+         
+         
+         assertEquals(true, ovatkoTaulukotSamat);
      }
 }

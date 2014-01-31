@@ -49,38 +49,38 @@ public class LinkitettyListaTest {
         assertEquals(seuraavaSolmu, solmu2);
      }
      
-     @Test
-     public void lisaaminenToimiiSuuruusJarjestyksessa() {
-         Solmu solmu2 = new Solmu(3);
-         Solmu solmu3 = new Solmu(4);
-         Solmu solmu4 = new Solmu(2);
-         Solmu solmu5 = new Solmu(50);
-         Solmu solmu6 = new Solmu(2);
-         Solmu solmu7 = new Solmu(5);
-         Solmu solmu8 = new Solmu(9);
-         Solmu solmu9 = new Solmu(23);
-         this.lista.add(solmu2);
-         this.lista.add(solmu3);
-         this.lista.add(solmu4);
-         this.lista.add(solmu5);
-         this.lista.add(solmu6);
-         this.lista.add(solmu7);
-         this.lista.add(solmu8);
-         this.lista.add(solmu9);
-         
-         boolean pateeko = true;
-         
-         SolmuNode missaOllaan = this.lista.getNodeTop().seuraava();
-         while(missaOllaan.seuraava() != null){
-             if(missaOllaan.getSolmunPistearvo() < missaOllaan.seuraava().getSolmunPistearvo()){
-                 pateeko = false;
-                 break;
-             }
-             missaOllaan = missaOllaan.seuraava();
-         }
-         
-     assertEquals(true, pateeko);
-     }
+//     @Test
+//     public void lisaaminenToimiiSuuruusJarjestyksessa() {
+//         Solmu solmu2 = new Solmu(3);
+//         Solmu solmu3 = new Solmu(4);
+//         Solmu solmu4 = new Solmu(2);
+//         Solmu solmu5 = new Solmu(50);
+//         Solmu solmu6 = new Solmu(2);
+//         Solmu solmu7 = new Solmu(5);
+//         Solmu solmu8 = new Solmu(9);
+//         Solmu solmu9 = new Solmu(23);
+//         this.lista.add(solmu2);
+//         this.lista.add(solmu3);
+//         this.lista.add(solmu4);
+//         this.lista.add(solmu5);
+//         this.lista.add(solmu6);
+//         this.lista.add(solmu7);
+//         this.lista.add(solmu8);
+//         this.lista.add(solmu9);
+//         
+//         boolean pateeko = true;
+//         
+//         SolmuNode missaOllaan = this.lista.getNodeTop().seuraava();
+//         while(missaOllaan.seuraava() != null){
+//             if(missaOllaan.getSolmunPistearvo() < missaOllaan.seuraava().getSolmunPistearvo()){
+//                 pateeko = false;
+//                 break;
+//             }
+//             missaOllaan = missaOllaan.seuraava();
+//         }
+//         
+//     assertEquals(true, pateeko);
+//     }
      
      @Test
      public void topSailyy() {
