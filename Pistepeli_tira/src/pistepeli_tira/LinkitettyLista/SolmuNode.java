@@ -1,40 +1,66 @@
-
 package pistepeli_tira.LinkitettyLista;
 
 import pistepeli_tira.verkko.Solmu;
 
 /**
- *Tähän toteutetaan linkitetyn listan olio. 
-
+ * Linkitetyn listan olio eli 'node'.
  */
 public class SolmuNode {
+
     private Solmu solmu;
     private SolmuNode seuraava;
-    
-    public SolmuNode(Solmu solmu){
+    private SolmuNode edellinen;
+
+    public SolmuNode(Solmu solmu) {
         this.solmu = solmu;
-        this.seuraava=null;
+        this.seuraava = null;
+        this.edellinen = null;
     }
-    
-    public void asetaSeuraava(SolmuNode seuraava){
+
+    /**
+     * Asettaa valmiin noden tämän noden seuraajaksi
+     */
+    public void asetaSeuraava(SolmuNode seuraava) {
         this.seuraava = seuraava;
     }
-    
-    public void asetaSeuraava(Solmu seuraava){
+
+    /**
+     * Luo uuden noden, joka viittaa annettuun solmuun, ja asettaa sen tämän
+     * noden seuraajaksi
+     */
+    public void asetaSeuraava(Solmu seuraava) {
         this.seuraava = new SolmuNode(seuraava);
     }
-    
-    public Solmu getSolmu(){
+
+    /**
+     * Luo uuden noden, joka viittaa annettuun solmuun, ja asettaa sen tämän
+     * noden edeltäjäksi
+     */
+    public void asetaEdellinen(Solmu edellinen) {
+        this.edellinen = new SolmuNode(edellinen);
+    }
+
+    public Solmu getSolmu() {
         return this.solmu;
     }
-    public int getSolmunPistearvo(){
+
+    public int getSolmunPistearvo() {
         return this.solmu.getPistearvo();
     }
-    public String getSolmunNimi(){
+
+    public String getSolmunNimi() {
         return this.solmu.getNimi();
     }
-    
-    public SolmuNode seuraava(){
+
+    public SolmuNode seuraava() {
         return this.seuraava;
+    }
+
+    public SolmuNode edellinen() {
+        return this.edellinen;
+    }
+
+    public int getSolmunIndeksi() {
+        return this.solmu.indeksi();
     }
 }

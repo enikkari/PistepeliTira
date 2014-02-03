@@ -56,7 +56,9 @@ public class Verkko {
         }
     }
     /**
-     * Missä indeksissä solmu on verkossa.
+     * Missä indeksissä solmu on verkossa. Koodin nopeuttamiseksi jokaiseen solmuun
+     * on talletettu sen indeksi, joka vastaa sen indeksöintiä verkko-olion listassa.
+     * Näin ei tarvitse vertailla Solmu-olioita indeksin selvittämiseksi.
      */
     
     public int getMissaIndeksissaSolmuOn(Solmu solmu){
@@ -72,10 +74,15 @@ public class Verkko {
     public LinkitettyLista getVierus(int i){
         return this.vierus[i];
     }
-    
+    /**
+     * Kuinka monta kaarta verkossa on.
+     */
     public int getKaaria(){
         return this.kaaria;
     }
+    /**
+     * Kuinka monta solmua verkossa on.
+     */
     public int getSolmuja(){
         return this.solmuja;
     }

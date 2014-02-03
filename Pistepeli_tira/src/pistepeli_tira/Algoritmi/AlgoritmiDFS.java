@@ -62,5 +62,8 @@ public class AlgoritmiDFS {
         }
 
     }
+    public int parasPistemaara(){
+        return this.parasPistemaara;
+    }
 
 }

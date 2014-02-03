@@ -10,7 +10,7 @@ public class Solmu implements Comparator{
     private int pistearvo;
     private int indeksi; //indeksöinnin helpottamiseksi
     
-    /*
+    /**
     Luo 0 arvoisen solmun
     */
     public Solmu(String nimi){
@@ -20,16 +20,16 @@ public class Solmu implements Comparator{
     }
     
     
-    /*
-    Luo halutun arvoisen solmun 
+    /**
+    *Luo halutun arvoisen solmun 
     */
     public Solmu(String nimi, int pistearvo){
        this.nimi = nimi;
        this.pistearvo = pistearvo;
        this.indeksi = -1;
     }
-    /*
-    Luo nimettömän halutun arvoisen solmun 
+    /**
+    *Luo nimettömän halutun arvoisen solmun 
     */
     public Solmu(int pisteArvo){
        this.nimi = null;

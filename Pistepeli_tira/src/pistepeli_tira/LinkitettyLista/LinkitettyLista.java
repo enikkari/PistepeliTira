@@ -16,6 +16,10 @@ public class LinkitettyLista {
    public LinkitettyLista(Solmu topSolmu){
        this.top = new SolmuNode(topSolmu);
    }
+   
+   /**
+    * Palauttaa listan tunnus noden eli ensimmäisen noden 
+    */
    public SolmuNode getNodeTop(){
        return top;
    }
@@ -31,7 +35,9 @@ public class LinkitettyLista {
        this.top.asetaSeuraava(uusiNodi);
        uusiNodi.asetaSeuraava(seuraava);
    }
-   
+   /**
+    * Palauttaa listan tunnus solmun eli top-solmun
+    */
    
    public Solmu getSolmuOnTop(){
        return top.getSolmu();
