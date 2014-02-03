@@ -8,10 +8,13 @@ package VerkkoTest;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import pistepeli_tira.LinkitettyLista.LinkitettyLista;
+import pistepeli_tira.LinkitettyLista.SolmuNode;
 import pistepeli_tira.verkko.Solmu;
 import pistepeli_tira.verkko.Verkko;
 
@@ -82,16 +85,74 @@ public class KaarellinenVerkkoTest {
          
          Solmu[] solmutOikein =
                  new Solmu[]{a,b,c,d,e,f,g,h};
+//         
+//         boolean ovatkoTaulukotSamat = true;
+//         for(int i = 0; i<verkko.getSolmuja(); i++){
+//             if(solmutVerkossa[i] != solmutOikein[i]){
+//                 ovatkoTaulukotSamat = false;
+//                 break;
+//             }
+//         }
+//         
+//         
+         Assert.assertArrayEquals(solmutVerkossa, solmutOikein);
+     }
+     
+     @Test
+     public void solmujenOmaIneksointiVerkossa() {
+         int[] solmutVerkossa =
+                 new int[verkko.getSolmuja()];
          
-         boolean ovatkoTaulukotSamat = true;
          for(int i = 0; i<verkko.getSolmuja(); i++){
-             if(solmutVerkossa[i] != solmutOikein[i]){
-                 ovatkoTaulukotSamat = false;
-                 break;
-             }
+             solmutVerkossa[i]=this.verkko.getSolmuIdeksissa(i).indeksi();
          }
          
-         
-         assertEquals(true, ovatkoTaulukotSamat);
+         int[] solmutOikein =
+                 new int[]{0,1,2,3,4,5,6,7};
+         Assert.assertArrayEquals(solmutVerkossa, solmutOikein);
      }
+     
+     @Test
+     public void solmujenHakeminenIndeksilla1() {
+         assertEquals(-1, this.verkko.getMissaIndeksissaSolmuOn(new Solmu("ö", 20)));
+     }
+     @Test
+     public void solmujenHakeminenIndeksilla2() {
+         assertEquals(0 , this.verkko.getMissaIndeksissaSolmuOn(a));
+     }
+     @Test
+     public void solmujenHakeminenIndeksilla3() {
+         int[] oikeaIndeksointi = new int[]{0,1,2,3,4,5,6,7};
+         int[] verkonIndeksointi = new int[]
+                                {this.verkko.getMissaIndeksissaSolmuOn(a),
+                                this.verkko.getMissaIndeksissaSolmuOn(b),
+                                this.verkko.getMissaIndeksissaSolmuOn(c),
+                                this.verkko.getMissaIndeksissaSolmuOn(d),
+                                this.verkko.getMissaIndeksissaSolmuOn(e),
+                                this.verkko.getMissaIndeksissaSolmuOn(f),
+                                this.verkko.getMissaIndeksissaSolmuOn(g),
+                                this.verkko.getMissaIndeksissaSolmuOn(h)};
+         
+         //käytä metodia taulukkoon!
+         Assert.assertArrayEquals(oikeaIndeksointi, verkonIndeksointi);
+     }
+     @Test
+     public void vierusTest(){
+         LinkitettyLista aanVierus = this.verkko.getVierus(0);
+         SolmuNode missa = aanVierus.getNodeTop();
+         Solmu[] aanVierusVerkossa = new Solmu[aanVierus.listanPituus()];
+         int i=0;
+         while(missa.seuraava() != null){
+             aanVierusVerkossa[i]=missa.getSolmu();
+             missa = missa.seuraava();
+             i++;
+         }
+         aanVierusVerkossa[i]=missa.getSolmu();
+         
+         Solmu[] aanVierusOikein = new Solmu[]{a,d,c,b};
+         
+         Assert.assertArrayEquals(aanVierusOikein, aanVierusVerkossa);
+     }
+     
+     
 }

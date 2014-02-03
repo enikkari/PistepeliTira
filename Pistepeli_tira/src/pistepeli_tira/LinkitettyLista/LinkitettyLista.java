@@ -6,6 +6,8 @@ import pistepeli_tira.verkko.Solmu;
 /**
  *Tähän toteutetaan linkitetty lista
  *Tässä työssä LinkitettyLista listaa verkon solmuja.
+ * LinkitetynListan metodit, haku- ja pituus metodeja lukuunottamatta, toimivat ajassa O(1).
+ * Hakumetodit search ja searchNode toimivat lineaarisessa ajassa
  */
 public class LinkitettyLista {
     
@@ -19,9 +21,9 @@ public class LinkitettyLista {
    }
    
    /**
-    * Metodi lisää noden suuruusjärjestyksessä oikealle paikalle listassa.
-    * Aikavaativuus on lineaarinen listan pituuden suhteen.
-    * top-node ei kuitenkaan vaihda paikkaa, vaikka sen pistearvo olisi uutta pienempi
+    * Lisää listaan alkion top-noden perään.
+    * top-node ei vaihda paikkaa.
+    * O(1)
    **/
    public void add(Solmu solmu){
        SolmuNode uusiNodi = new SolmuNode(solmu);
@@ -72,6 +74,19 @@ public class LinkitettyLista {
            missaOllaan = missaOllaan.seuraava();
        }
        return null;
+   }
+   /**
+    * palauttaa kuinka monta nodea listassa on, top-node mukaan lukien. Tämä metodi
+    * on lähinnä testaamista varten.
+    */
+   public int listanPituus(){
+       SolmuNode missa = this.top;
+       int pituus = 0;
+       while(missa != null){
+           pituus++;
+           missa = missa.seuraava();
+       }
+       return pituus;
    }
    
 }

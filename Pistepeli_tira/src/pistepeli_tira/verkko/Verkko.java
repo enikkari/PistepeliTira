@@ -21,7 +21,9 @@ public class Verkko {
         this.solmuja=solmut.length;
         this.vierus = new LinkitettyLista[solmut.length];
         for(int i =0; i<solmut.length; i++){
-            LinkitettyLista lista = new LinkitettyLista(solmut[i]);
+            Solmu solmu = solmut[i];
+            solmu.asetaIndeksi(i);//asetetaan solmulle indeksi, jotta solmujen tunnistaminen olisi nopeampaa.
+            LinkitettyLista lista = new LinkitettyLista(solmu);
             this.vierus[i]=lista;
         }
     }
@@ -44,7 +46,7 @@ public class Verkko {
         }
     }
     /**
-     * Indeksöinti alkaa nollasta. Jos i on liian suuri, palautetaan null.
+     * Indeksöinti alkaa nollasta. Jos i on liian suuri tai negatiivinen, palautetaan null.
      */
     public Solmu getSolmuIdeksissa(int i){
         if(i<vierus.length && i>=0){
@@ -54,18 +56,17 @@ public class Verkko {
         }
     }
     /**
-     * aikavaativuus O(|V|)
-     * @param solmu
-     * @return 
+     * Missä indeksissä solmu on verkossa.
      */
     
     public int getMissaIndeksissaSolmuOn(Solmu solmu){
-        for(int i =0; i<this.solmuja; i++){
-            if(this.getSolmuIdeksissa(i) == solmu){
-                return i;
-            }
-        }
-        return -1;
+//        for(int i =0; i<this.solmuja; i++){
+//            if(this.getSolmuIdeksissa(i) == solmu){
+//                return i;
+//            }
+//        }
+//        return -1;
+        return solmu.indeksi();
     }
     
     public LinkitettyLista getVierus(int i){

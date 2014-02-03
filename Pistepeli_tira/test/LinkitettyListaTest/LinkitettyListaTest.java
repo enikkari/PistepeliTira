@@ -27,6 +27,44 @@ public class LinkitettyListaTest {
     public void setUp() {
         this.solmu1 = new Solmu("solmu1", 30);
         this.lista = new LinkitettyLista(solmu1);
+        Solmu solmu2 = new Solmu(3);
+         Solmu solmu3 = new Solmu(4);
+         Solmu solmu4 = new Solmu(2);
+         Solmu solmu5 = new Solmu(50);
+         Solmu solmu6 = new Solmu(2);
+         Solmu solmu7 = new Solmu(5);
+         Solmu solmu8 = new Solmu(9);
+         Solmu solmu9 = new Solmu(23);
+         this.lista.add(solmu2);
+         this.lista.add(solmu3);
+         this.lista.add(solmu4);
+         this.lista.add(solmu5);
+         this.lista.add(solmu6);
+         this.lista.add(solmu7);
+         this.lista.add(solmu8);
+         this.lista.add(solmu9);
+         
+     assertEquals(this.solmu1, this.lista.getSolmuOnTop());
+     }
+     
+     @Test
+     public void listanPituusTest(){
+         Solmu solmu2 = new Solmu(3);
+         Solmu solmu3 = new Solmu(4);
+         Solmu solmu4 = new Solmu(2);
+         Solmu solmu5 = new Solmu(50);
+         Solmu solmu6 = new Solmu(2);
+         Solmu solmu7 = new Solmu(5);
+         Solmu solmu8 = new Solmu(9);
+         Solmu solmu9 = new Solmu(23);
+         this.lista.add(solmu2);
+         this.lista.add(solmu3);
+         this.lista.add(solmu4);
+         this.lista.add(solmu5);
+         this.lista.add(solmu6);
+         this.lista.add(solmu7);
+         this.lista.add(solmu8);
+         this.lista.add(solmu9);
     }
     
     @After
@@ -82,25 +120,14 @@ public class LinkitettyListaTest {
 //     assertEquals(true, pateeko);
 //     }
      
+
+     
      @Test
-     public void topSailyy() {
-         Solmu solmu2 = new Solmu(3);
-         Solmu solmu3 = new Solmu(4);
-         Solmu solmu4 = new Solmu(2);
-         Solmu solmu5 = new Solmu(50);
-         Solmu solmu6 = new Solmu(2);
-         Solmu solmu7 = new Solmu(5);
-         Solmu solmu8 = new Solmu(9);
-         Solmu solmu9 = new Solmu(23);
-         this.lista.add(solmu2);
-         this.lista.add(solmu3);
-         this.lista.add(solmu4);
-         this.lista.add(solmu5);
-         this.lista.add(solmu6);
-         this.lista.add(solmu7);
-         this.lista.add(solmu8);
-         this.lista.add(solmu9);
-         
-     assertEquals(this.solmu1, this.lista.getSolmuOnTop());
+     public void listanPituus(){
+         assertEquals(9, this.lista.listanPituus());
      }
+//     @Test
+//     public void etsiminenToimii(){
+//         
+//     }
 }

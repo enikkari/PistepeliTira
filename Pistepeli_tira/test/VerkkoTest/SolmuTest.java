@@ -89,6 +89,11 @@ public class SolmuTest {
         Solmu nimeton = new Solmu(30);
         assertEquals(nimeton.toString(), "null:30");
     }
+    @Test
+    public void indeksoiSolmu(){
+        this.perttiSolmu.asetaIndeksi(4);
+        assertEquals(4, perttiSolmu.indeksi());
+    }
     
 
     // TODO add test methods here.
