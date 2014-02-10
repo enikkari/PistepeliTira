@@ -29,7 +29,7 @@ public class Main {
         for(int i = 0; i<solmuja; i++){
             String nimi =hemmo.nextLine();
             int pistearvo =hemmo.nextInt();
-            solmuja[i] = new Solmu(nimi, pistearvo);
+            solmut[i] = new Solmu(nimi, pistearvo);
         }
         Verkko uusiVerkko = new Verkko(solmut);
         //sit kaaret
