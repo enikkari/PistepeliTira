@@ -35,4 +35,11 @@ public class Pino {
         this.Top = exTop.seuraava();
         return exTop.getSolmu();
     }
+    
+    public boolean isEmpty(){
+        if(this.Top==null){
+            return true;
+        }
+        return false;
+    }
 }

@@ -63,4 +63,8 @@ public class SolmuNode {
     public int getSolmunIndeksi() {
         return this.solmu.indeksi();
     }
+    @Override
+    public String toString(){
+        return this.solmu.toString();
+    }
 }

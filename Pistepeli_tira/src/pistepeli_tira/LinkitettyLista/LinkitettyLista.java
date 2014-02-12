@@ -94,5 +94,15 @@ public class LinkitettyLista {
        }
        return pituus;
    }
+   /**
+    * Lisää solmun ensimmäiseksi solmuksi, sen sijaan, että lisäisi sen top-noden perään.
+    * @param solmu 
+    */
+   public void addOnTop(Solmu solmu){
+       SolmuNode vanhaTop = this.top;
+       SolmuNode uusiNode = new SolmuNode(solmu);
+       uusiNode.asetaSeuraava(vanhaTop);
+       this.top=uusiNode;
+   }
    
 }
