@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 FEB 2014 15:54
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  17 FEB 2014 16:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -583,9 +583,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Use
 rs/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko1.PNG> </Users/eev
-anikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG>] [2 </Users/eevan
-ikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG>] (./testausdokument
-ti.aux) ) 
+anikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 42--45
+
+ []
+
+
+Overfull \hbox (75.54878pt too wide) in paragraph at lines 42--45
+\T1/cmr/m/n/12 Kuvat ver-kois-ta on luo-tu si-vul-la http://illuminations.nctm.
+org/Activity.aspx?id=3550
+ []
+
+[2 </Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG>]
+(./testausdokumentti.aux) ) 
 Here is how much of TeX's memory you used:
  4294 strings out of 493488
  56190 string characters out of 3141326
@@ -594,12 +604,12 @@ Here is how much of TeX's memory you used:
  8705 words of font info for 27 fonts, out of 3000000 for 9000
  1118 hyphenation exceptions out of 8191
  38i,6n,35p,401b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/cm-super/cm-super-
-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfbx1200
-.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm0900.p
-fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
->
-Output written on testausdokumentti.pdf (2 pages, 69653 bytes).
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/
+cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public
+/cm-super/sfbx1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/c
+m-super/sfrm0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-
+super/sfrm1200.pfb>
+Output written on testausdokumentti.pdf (2 pages, 70792 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  17 compressed objects within 1 object stream
