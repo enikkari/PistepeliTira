@@ -13,19 +13,26 @@ public class Verkko {
 
     /**
      * Luo verkon jossa ei ole vielä kaaria, vain solmut.
-     *
-     * @param solmut
      */
     public Verkko(Solmu[] solmut) {
         this.kaaria = 0;
         this.solmuja = solmut.length;
         this.vierus = new LinkitettyLista[solmut.length];
         for (int i = 0; i < solmut.length; i++) {
+            if(solmut[i]!=null){
             Solmu solmu = solmut[i];
             solmu.asetaIndeksi(i);//asetetaan solmulle indeksi, jotta solmujen tunnistaminen olisi nopeampaa.
             LinkitettyLista lista = new LinkitettyLista(solmu);
             this.vierus[i] = lista;
+            }
         }
+    }
+    /**
+     * Luo verkko kaarien kanssa.
+     */
+    public Verkko(Solmu[] solmut, int[][] kaaret){
+        this(solmut);
+        this.lisaaKaaret(kaaret);
     }
 
     /**

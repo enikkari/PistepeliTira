@@ -9,8 +9,7 @@ package pistepeli_tira.LinkitettyLista;
 import pistepeli_tira.verkko.Solmu;
 
 /**
- *
- * @author eevanikkari
+ *Vanha kunnon pino. Tässä pinossa pinotaan Solmuja.
  */
 public class Pino {
     
@@ -20,13 +19,18 @@ public class Pino {
         this.Top = null;
     }
     
+    /**
+     * Lisää Solmun pinon päällimmäiseksi.
+     */
     public void push(Solmu solmu){
         SolmuNode exTop = this.Top;
         SolmuNode uusiTop = new SolmuNode(solmu);
         uusiTop.asetaSeuraava(exTop);
         this.Top = uusiTop;
     }
-    
+    /**
+     * Palauttaa listan päällimäisen solmun ja poistaa sen pinosta.
+     */
     public Solmu pop(){
         if(this.Top == null){
             return null;
@@ -36,6 +40,9 @@ public class Pino {
         return exTop.getSolmu();
     }
     
+    /**
+     * Palauttaa true, jos pino on tyhjä.
+     */
     public boolean isEmpty(){
         if(this.Top==null){
             return true;

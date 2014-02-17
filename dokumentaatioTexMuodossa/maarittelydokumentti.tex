@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper,leqno]{amsart}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}     
+\usepackage[finnish]{babel}   
+\usepackage{amsfonts, amsthm}     
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ dsfont }
+\usepackage{graphicx}
+\usepackage[pdftex]{hyperref}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\pagestyle{plain}
+\begin{document}
+Määrittelydokumentti, tira-harjoitustyö 2014: 'Pistepeli'\\
+
+Eeva Nikkari\\\\
+				
+Ideana on toteuttaa suunnattu verkko, jonka jokaisella pisteellä on jokin kokonaisluku pistearvonaan. Algoritmin on tarkoitus etsiä verkosta reitti, jota kulkemalla kuljettujen solmujen pistearvon summa on mahdollisimman suuri.\\\\
+
+Ongelma palaa siis painavimman polun löytämiseen suunnatussa, painotetussa (, syklittömässä) verkossa. Käytämme algoritmia, joka on esitelty sivulla \href{http://www.geeksforgeeks.org/find-longest-path-directed-acyclic-graph/}{<Longest Path in a Directed Acyclic Graph>}. Verkon solmut siis järjestetään ensin topologiseen järjestykseen, eli pinossa oleviin solmuihin ei osoita kaaria solmun alla olevista solmuista. (Algoritmi ei toimi siis verkoilla, joissa on sykli). Nyt jokainen solmu käydään tässä järjestyksessä läpi ja katsotaan olisiko siitä osoittava nuoli otollisempi reitti osoitettavaan solmuun, kuin jo mahdollisesti aikaisemmin käsitelty reitti.\\\\
+
+Projektiin toteutetaan siis suunnattu, painotetuilla solmuilla varustettu verkko, linkitetty lista, pino ja itse algoritmi.
+Aikavaativuuden tavoite algoritmille on O(|V|+|E|), missä E on kaarien- ja V solmujen joukko. Tilavaativuuden tavoite on myös O(|V|+|E|).
+
+
+
+\end{document}
+ 

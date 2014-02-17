@@ -36,7 +36,7 @@ public class topoTest {
         Solmu Y =new Solmu("Y",4);
         Solmu Z =new Solmu("Z",2);
         
-        Verkko uusiVerkko = new Verkko(new Solmu[]{R, S, T, X, Y, Z});
+        Verkko uusiVerkko = new Verkko(new Solmu[]{R, S, T, X, Y, Z}, new int[][]{{0,1},{0,2},{1,2},{1,3},{2,3},{2,4},{2,5},{3,4},{3,5},{4,5}});
         uusiVerkko.lisaaKaaret(new int[][]{{0,1},{0,2},{1,2},{1,3},{2,3},{2,4},{2,5},{3,4},{3,5},{4,5}});
         
         topo = new TopoAlgoritmi(uusiVerkko);
@@ -57,8 +57,8 @@ public class topoTest {
      }
      
      @Test
-     public void tulokset() {
-         assertEquals("",this.topo.tulokset());
+     public void parasPistemaara() {
+         assertEquals(19,this.topo.getParasPistemaara());
      }
      
      @Test

@@ -4,8 +4,9 @@ package pistepeli_tira.LinkitettyLista;
 import pistepeli_tira.verkko.Solmu;
 
 /**
- *Tähän toteutetaan linkitetty lista
- *Tässä työssä LinkitettyLista listaa verkon solmuja.
+ * Yhteen suuntaan linkitetty lista.
+ * Tällä linkitetyllä listalla on 'tunnus-node' eli top-node, joka annetaan listan konstruktorille ja joka säilyy paikallaan, kun käytetään add-metodia. 
+ * Käytännön syistä listalla on myös addOnTop-metodi, jolla lisätään uusi solmu listan topiksi ja vanha top sen seuraajaksi.
  * LinkitetynListan metodit, haku- ja pituus metodeja lukuunottamatta, toimivat ajassa O(1).
  * Hakumetodit search ja searchNode toimivat lineaarisessa ajassa
  */
@@ -27,7 +28,6 @@ public class LinkitettyLista {
    /**
     * Lisää listaan alkion top-noden perään.
     * top-node ei vaihda paikkaa.
-    * O(1)
    **/
    public void add(Solmu solmu){
        SolmuNode uusiNodi = new SolmuNode(solmu);
@@ -42,20 +42,7 @@ public class LinkitettyLista {
    public Solmu getSolmuOnTop(){
        return top.getSolmu();
    }
-   
-//   private SolmuNode etsiSeuraavaksiSuurin(int uudenNodenPistearvo){
-//       
-//       SolmuNode missaMennaan= top;
-//       while(missaMennaan.seuraava() != null){
-//           if(missaMennaan.seuraava().getSolmunPistearvo() <= uudenNodenPistearvo){
-//               return missaMennaan;
-//           }
-//           missaMennaan=missaMennaan.seuraava();
-//       }
-//       
-//       return missaMennaan;
-//   }
-   
+
    public boolean search(Solmu solmu){
        SolmuNode missaOllaan= this.top;
        while(missaOllaan != null){
@@ -69,7 +56,6 @@ public class LinkitettyLista {
    
    /**
     * palauttaa noden, jossa kyseinen solmu on
-    * @return 
     */
    public SolmuNode searchNode(Solmu solmu){
        SolmuNode missaOllaan= this.top;
@@ -96,7 +82,6 @@ public class LinkitettyLista {
    }
    /**
     * Lisää solmun ensimmäiseksi solmuksi, sen sijaan, että lisäisi sen top-noden perään.
-    * @param solmu 
     */
    public void addOnTop(Solmu solmu){
        SolmuNode vanhaTop = this.top;
