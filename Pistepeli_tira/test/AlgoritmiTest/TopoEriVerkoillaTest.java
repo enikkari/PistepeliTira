@@ -12,7 +12,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import pistepeli_tira.Algoritmi.TopoAlgoritmi;
+import pistepeli_tira.LinkitettyLista.LinkitettyLista;
 import pistepeli_tira.LinkitettyLista.Pino;
+import pistepeli_tira.LinkitettyLista.SolmuNode;
 import pistepeli_tira.verkko.Solmu;
 import pistepeli_tira.verkko.Verkko;
 
@@ -23,7 +25,7 @@ import pistepeli_tira.verkko.Verkko;
 public class TopoEriVerkoillaTest {
 
     TopoAlgoritmi topo2;
-    TopoAlgoritmi topo3;
+    TopoAlgoritmi topo1;
 
     public TopoEriVerkoillaTest() {
     }
@@ -46,12 +48,12 @@ public class TopoEriVerkoillaTest {
             new Solmu("Phecda", 5)},
                 new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 4},
                 {3, 6}, {5, 4}, {5, 6}});
-        topo3 = new TopoAlgoritmi(verkko3);
+        topo1 = new TopoAlgoritmi(verkko3);
     }
 
     @Test
     public void topoPinoOikeinVerkko3() {
-        Pino pino = this.topo3.getTopoPino();
+        Pino pino = this.topo1.getTopoPino();
         int[] solmut = new int[7];
         for (int i = 0; i < 7; i++) {
             solmut[i] = pino.pop().indeksi();
@@ -77,7 +79,8 @@ public class TopoEriVerkoillaTest {
      }
      
      @Test
-     public void reitti3() {
-         assertArrayEquals(new int[]{-1,-1,1,2,3,-1,3},this.topo3.getReitti());
+     public void reitti1() {
+         assertArrayEquals(new int[]{-1,-1,1,2,3,-1,3},this.topo1.getReitti());
      }
+     
 }

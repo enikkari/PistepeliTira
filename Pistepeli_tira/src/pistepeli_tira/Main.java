@@ -49,14 +49,14 @@ public class Main {
         }
     }
     
-    public static void verkko1(){
-        Verkko verkko1 = new Verkko(new Solmu[]{new Solmu("R",3), new Solmu("S",5),
+    public static void verkko3(){
+        Verkko verkko3 = new Verkko(new Solmu[]{new Solmu("R",3), new Solmu("S",5),
                                                    new Solmu("T",2), new Solmu("X",3),
                                                    new Solmu("Y",4), new Solmu("Z",2)},
                                                    new int[][]{{0,1},{0,2},{1,2},{1,3},
                                                        {2,3},{2,4},{2,5},{3,4},{3,5},
                                                        {4,5}});
-        TopoAlgoritmi topo = new TopoAlgoritmi(verkko1);
+        TopoAlgoritmi topo = new TopoAlgoritmi(verkko3);
         System.out.println(topo.tulokset());
     }
     
@@ -73,14 +73,14 @@ public class Main {
         System.out.println(topo.tulokset());
     }
     
-    public static void verkko3(){
-        Verkko verkko3 = new Verkko(new Solmu[]{new Solmu("Alkaid",-2), new Solmu("Mizar",3),
+    public static void verkko1(){
+        Verkko verkko1 = new Verkko(new Solmu[]{new Solmu("Alkaid",-2), new Solmu("Mizar",3),
                                                    new Solmu("Alioth",8), new Solmu("Megrez",-1),
                                                    new Solmu("Dubhe",10), new Solmu("Merak",1),
                                                    new Solmu("Phecda",5)},
                                                    new int[][]{{0,1},{1,2},{2,3},{3,4},
                                                                 {3,6},{5,4},{5,6}});
-        TopoAlgoritmi topo = new TopoAlgoritmi(verkko3);
+        TopoAlgoritmi topo = new TopoAlgoritmi(verkko1);
         System.out.println(topo.tulokset());
     }
     
