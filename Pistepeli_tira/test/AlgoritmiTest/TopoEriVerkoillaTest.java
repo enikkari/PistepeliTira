@@ -42,23 +42,23 @@ public class TopoEriVerkoillaTest {
                 {6, 7}, {6, 8}, {7, 8}});
         topo2 = new TopoAlgoritmi(verkko2);
 
-        Verkko verkko3 = new Verkko(new Solmu[]{new Solmu("Alkaid", -2), new Solmu("Mizar", 3),
+        Verkko verkko1 = new Verkko(new Solmu[]{new Solmu("Alkaid", -2), new Solmu("Mizar", 3),
             new Solmu("Alioth", 8), new Solmu("Megrez", -1),
             new Solmu("Dubhe", 10), new Solmu("Merak", 1),
             new Solmu("Phecda", 5)},
-                new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 4},
-                {3, 6}, {5, 4}, {5, 6}});
-        topo1 = new TopoAlgoritmi(verkko3);
+                new int[][]{{0, 1}, {1, 2}, {2, 3}, {3, 6},
+                {3, 4}, {5, 6}, {5, 4}});
+        topo1 = new TopoAlgoritmi(verkko1);
     }
 
     @Test
-    public void topoPinoOikeinVerkko3() {
+    public void topoPinoOikeinVerkko1() {
         Pino pino = this.topo1.getTopoPino();
         int[] solmut = new int[7];
         for (int i = 0; i < 7; i++) {
             solmut[i] = pino.pop().indeksi();
         }
-        assertArrayEquals(new int[]{5, 0, 1, 2, 3, 4, 6}, solmut);
+        assertArrayEquals(new int[]{5, 0, 1, 2, 3, 6, 4}, solmut);
     }
 
     @Test

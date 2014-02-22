@@ -84,17 +84,7 @@ public class KaarellinenVerkkoTest {
          }
          
          Solmu[] solmutOikein =
-                 new Solmu[]{a,b,c,d,e,f,g,h};
-//         
-//         boolean ovatkoTaulukotSamat = true;
-//         for(int i = 0; i<verkko.getSolmuja(); i++){
-//             if(solmutVerkossa[i] != solmutOikein[i]){
-//                 ovatkoTaulukotSamat = false;
-//                 break;
-//             }
-//         }
-//         
-//         
+                 new Solmu[]{a,b,c,d,e,f,g,h};    
          Assert.assertArrayEquals(solmutVerkossa, solmutOikein);
      }
      

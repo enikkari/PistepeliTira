@@ -24,28 +24,7 @@ public class Main {
                 verkko3();
             }
         }else{
-        System.out.println("Kuinka monta solmua verkkoon?");
-        int solmuja = lukija.nextInt();
-        Solmu[] solmut =new Solmu[solmuja];
-        System.out.println("Anna ensin solmun nimi, sitten pistearvo (Solmut indeksöidään nollasta alkaen, lisäysjärjestyksessä)");
-        for(int i = 0; i<solmuja; i++){
-            String nimi =lukija.next();
-            int pistearvo =lukija.nextInt();
-            solmut[i] = new Solmu(nimi, pistearvo);
-        }
-        Verkko uusiVerkko = new Verkko(solmut);
-        //sit kaaret
-        System.out.println("Kuinka monta kaarta verkkoon?");
-        int kaaria = lukija.nextInt();
-        System.out.println("Käytä solmujen indeksöintiä lisätessäsi kaaria");
-        for(int i = 0; i<kaaria; i++){
-            int solmusta =lukija.nextInt();
-            int solmuun =lukija.nextInt();
-            uusiVerkko.lisaaKaari(solmusta, solmuun);
-        }
-        
-        TopoAlgoritmi topo = new TopoAlgoritmi(uusiVerkko);
-        System.out.println(topo.tulokset());
+            teeVerkko(lukija);
         }
     }
     
@@ -81,6 +60,33 @@ public class Main {
                                                    new int[][]{{0,1},{1,2},{2,3},{3,4},
                                                                 {3,6},{5,4},{5,6}});
         TopoAlgoritmi topo = new TopoAlgoritmi(verkko1);
+        System.out.println(topo.tulokset());
+    }
+    
+    public static void teeVerkko(Scanner lukija){
+        System.out.println("Kuinka monta solmua verkkoon?");
+        int solmuja = lukija.nextInt();
+        Solmu[] solmut =new Solmu[solmuja];
+        System.out.println("Anna ensin solmun nimi, sitten pistearvo (Solmut indeksöidään nollasta alkaen, lisäysjärjestyksessä)");
+        for(int i = 0; i<solmuja; i++){
+            String nimi =lukija.next();
+            int pistearvo =lukija.nextInt();
+            solmut[i] = new Solmu(nimi, pistearvo);
+            System.out.println("");
+        }
+        Verkko uusiVerkko = new Verkko(solmut);
+        //sit kaaret
+        System.out.println("Kuinka monta kaarta verkkoon?");
+        int kaaria = lukija.nextInt();
+        System.out.println("Käytä solmujen indeksöintiä lisätessäsi kaaria");
+        for(int i = 0; i<kaaria; i++){
+            int solmusta =lukija.nextInt();
+            int solmuun =lukija.nextInt();
+            uusiVerkko.lisaaKaari(solmusta, solmuun);
+            System.out.println("");
+        }
+        
+        TopoAlgoritmi topo = new TopoAlgoritmi(uusiVerkko);
         System.out.println(topo.tulokset());
     }
     

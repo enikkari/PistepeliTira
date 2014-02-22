@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  18 FEB 2014 12:20
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 FEB 2014 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -534,13 +534,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
  []
 
 
-Overfull \hbox (80.11711pt too wide) in paragraph at lines 23--25
+Overfull \hbox (80.11711pt too wide) in paragraph at lines 23--26
 \T1/cmr/m/n/12 (Kuvat ver-kois-ta on luo-tu si-vul-la http://illuminations.nctm
 .org/Activity.aspx?id=3550
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
@@ -552,72 +552,110 @@ aphic file (type png)
 
 <use /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko1.PNG>
 Package pdftex.def Info: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodo
-ssa//verkko1.PNG used on input line 27.
+ssa//verkko1.PNG used on input line 28.
 (pdftex.def)             Requested size: 645.40968pt x 244.91438pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 27--30
 
  []
 
 
-</Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG, id=3, 
-485.815pt x 290.08376pt>
-File: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG Gr
-aphic file (type png)
+</Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//pino1.PNG, id=3, 72
+3.70375pt x 215.80624pt>
+File: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//pino1.PNG Grap
+hic file (type png)
 
-<use /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG>
+<use /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//pino1.PNG>
 Package pdftex.def Info: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodo
-ssa//verkko2.PNG used on input line 32.
-(pdftex.def)             Requested size: 485.81381pt x 290.08304pt.
+ssa//pino1.PNG used on input line 32.
+(pdftex.def)             Requested size: 723.70198pt x 215.80571pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
 
-</Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG, id=4, 
-317.185pt x 270.00874pt>
-File: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG Gr
-aphic file (type png)
+Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
-<use /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG>
-Package pdftex.def Info: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodo
-ssa//verkko3.PNG used on input line 37.
-(pdftex.def)             Requested size: 317.1842pt x 270.00807pt.
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Use
 rs/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko1.PNG> </Users/eev
-anikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+anikkari/PistepeliTira/dokumentaatioTexMuodossa//pino1.PNG>]
+</Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG, id=14,
+ 485.815pt x 290.08376pt>
+File: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG Gr
+aphic file (type png)
+
+<use /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG>
+Package pdftex.def Info: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodo
+ssa//verkko2.PNG used on input line 38.
+(pdftex.def)             Requested size: 485.81381pt x 290.08304pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--45
+</Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG, id=15,
+ 317.185pt x 270.00874pt>
+File: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG Gr
+aphic file (type png)
+
+<use /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG>
+Package pdftex.def Info: /Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodo
+ssa//verkko3.PNG used on input line 43.
+(pdftex.def)             Requested size: 317.1842pt x 270.00807pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
-[2 </Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG>]
-(./testausdokumentti.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2 </Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko2.PNG> </
+Users/eevanikkari/PistepeliTira/dokumentaatioTexMuodossa//verkko3.PNG>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+[3] (./testausdokumentti.aux) ) 
 Here is how much of TeX's memory you used:
- 4294 strings out of 493488
- 56190 string characters out of 3141326
- 114811 words of memory out of 3000000
- 7351 multiletter control sequences out of 15000+200000
+ 4299 strings out of 493488
+ 56490 string characters out of 3141326
+ 115811 words of memory out of 3000000
+ 7355 multiletter control sequences out of 15000+200000
  8705 words of font info for 27 fonts, out of 3000000 for 9000
  1118 hyphenation exceptions out of 8191
- 38i,6n,35p,401b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/
-cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public
-/cm-super/sfbx1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/c
-m-super/sfrm0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/cm-
-super/sfrm1200.pfb>
-Output written on testausdokumentti.pdf (2 pages, 71101 bytes).
+ 38i,6n,35p,413b,201s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/texmf-dist/fonts/enc/dv
+ips/cm-super/cm-super-t1.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1200.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publ
+ic/cm-super/sfrm0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public
+/cm-super/sfrm1200.pfb>
+Output written on testausdokumentti.pdf (3 pages, 98175 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
