@@ -17,7 +17,7 @@ Mikä verkoista? (int)
 1
 Paras reitti oli Mizar:3->Alioth:8->Megrez:-1->Dubhe:10, ja sen arvo oli 20.
 
-Ohjelmassa on myös mahdollisuus ’luoda verkko käsin’ eli syöttää ensin verkon solmut ohjelmaan ja sitten kaaret niiden välille. (Tämä on varsin vaivalloista ja sitä varten on mahdollisuus käyttää valmiita verkkoja).
+Ohjelmassa on myös mahdollisuus ’luoda verkko käsin’ eli syöttää ensin verkon solmut ohjelmaan ja sitten kaaret niiden välille. (Tämä on varsin vaivalloista ja sitä varten on mahdollisuus käyttää valmiita verkkoja). Huomaa, että verkossa ei saa olla looppia, jotta algoritmi toimii oikein.
 
 Ohjelman suoritus voi näyttää esimerkiksi tältä:
 run:

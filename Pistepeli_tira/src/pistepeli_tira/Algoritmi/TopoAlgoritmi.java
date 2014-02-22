@@ -133,14 +133,21 @@ public class TopoAlgoritmi {
         this.parasPisteSaalis = paras;
         LinkitettyLista parasReitti = new LinkitettyLista(verkko.getSolmuIdeksissa(viimeinenSolmuParhaassaReitissä));
         int missa = viimeinenSolmuParhaassaReitissä;
-
+        
+        int solmujaReitissa =0; //Käytetään tätä indeksiä huomaamaan, jos koodi joutuu looppiin
         while (this.reitti[missa] != -1) {
             //lähtösolmuun ei tule kaarta mistään, joten se on taulukossa edelleen
             //alkuperäisellä arvolla -1
+            if(solmujaReitissa<=this.verkko.getSolmuja()){
+            //Jos reitti käy läpi enemmän solmuja kuin mitä verkossa on niin sen on täytynyt joutua looppiin
             missa = reitti[missa];
             Solmu lisattava = verkko.getSolmuIdeksissa(missa);
             parasReitti.addOnTop(lisattava);
-
+            solmujaReitissa++;
+            }else{
+                System.out.println("Verkossasi on looppi ja algoritmi ei toimi oikein");
+                break;
+            }
         }
         this.parasReitti = parasReitti;
 
@@ -171,7 +178,7 @@ public class TopoAlgoritmi {
      * Palauttaa algoritmin laskeman parhaan reitin linkitettynä listana.
      */
     public LinkitettyLista getLinkitettyReitti() {
-        return this.getLinkitettyReitti();
+        return this.parasReitti;
     }
 
     /**

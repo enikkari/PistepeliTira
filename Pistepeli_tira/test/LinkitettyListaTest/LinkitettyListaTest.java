@@ -63,6 +63,7 @@ public class LinkitettyListaTest {
      this.lista.addOnTop(new Solmu("ölöl",10));
      assertEquals("ölöl", this.lista.getSolmuOnTop().getNimi());
      }
+     
      @Test
      public void lisaaminenToimii() {
          Solmu solmu2 = new Solmu("solmu2", 3);
