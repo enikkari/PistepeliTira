@@ -46,7 +46,7 @@ Algoritmi kutsuu ensin verkolle G Topological-Sort(G) -algoritmia, jonka aikavaa
 
 Algoritmi käyttää aputaulukkoja pisteSaalis, reitti sekä pinoa. Lisäksi Topological-Sort -algoritmi käyttää aputaulukkoa kayty. Kaikkien taulukkojen ja pinon tilavaativuus on O(|V|). Koko algoritmin tilavaativuus on siis O(4|V|)=\textbf{O(|V|)}.\\
 
-Algoritmin eräs puutos on, että se ei tunnista, jos sille annetaan verkko, jossa on sykli. Algoritmi ei siis toimi oikein, jos verkossa on sykli. Käytännössä ongelmia tulee, kun algoritmi yrittää tulkita reitti-taulukkoa ja algoritmi jää looppiin.
+Algoritmin eräs puutos on, että se ei tunnista, jos sille annetaan verkko, jossa on sykli. Algoritmi ei siis toimi oikein, jos verkossa on sykli. Käytännössä ongelmia tulee, kun algoritmi yrittää tulkita reitti-taulukkoa ja algoritmi saattaa jäädä looppiin. Tähän kohtaan koodia on lisätty ominaisuus, että algoritmi huomaa, jos muodostuva polku on pitempi, kuin verkossa on solmuja ja lopettaa suorituksen. Näin algoritmi ei jää looppiin vaikka ei toimisikaan oikein annetulla verkolla.
 
 
 
